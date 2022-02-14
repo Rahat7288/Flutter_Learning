@@ -17,13 +17,21 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.teal[200],
       ),
-      body: const Center(
-        child: Image(
-            image: AssetImage('assets/img3.jpg'),
+      body:  Center(
+        child: IconButton(
+
+          onPressed: (){},
+          icon: const Icon(Icons.add_a_photo),
+
+        ),
         ),
 
-
-        ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          
+        },
+        child: const Text('click me'),
+      ),
 
       );
 
