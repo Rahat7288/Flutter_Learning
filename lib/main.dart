@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
@@ -17,20 +18,39 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.teal[200],
       ),
-      body:  Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+
+      //writing column practice for flutter.
+      body: Row(
         children: [
-          Text('rahat'),
-          IconButton(onPressed: null,
-              icon: Icon(Icons.add),
+          Expanded(
+            flex: 2,
+              child:Container(
+                padding: EdgeInsets.all(30.0),
+                color: Colors.lightGreen,
+                child: Text('1'),
+              ),
           ),
-          Container(
-            color: Colors.cyan,
-            padding: EdgeInsets.all(40.0),
-            child: Text('hello '),
+
+          Expanded(
+            flex: 3,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.deepOrangeAccent,
+              child: Text('2'),
+            ),
           ),
+          Expanded(
+            flex: 2,
+              child: Container(
+                padding: EdgeInsets.all(30.0),
+                color: Colors.cyan,
+                child: Text('3'),
+              ),
+          ),
+
         ],
-      ),
+      ), 
+          
 
       floatingActionButton: FloatingActionButton(
         onPressed: (){
